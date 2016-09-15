@@ -1,0 +1,13 @@
+{
+  "welcome": {
+    "hello": "Hello, {name}",
+    "intro": "This is an example react & redux application built by the pre-team.",
+    "downloads": {
+      "0": "{context} downloads",
+      "1": "{context} download",
+      "2..20": "{context} downloads",
+      "_": "A LOT of downloads"
+    },
+    "downloadsText": "There has been {{welcome.downloads}} to this day."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "welcome": {
+    "hello": "Hola, {name}",
+    "intro": "Este es un ejemplo reaccionar y aplicación redux construido por el pre-equipo.",
+    "downloads": {
+      "0": "{context} descargas",
+      "1": "{context} descargar",
+      "2..20": "{context} descargas",
+      "_": "UN MONTÓN DE descargas"
+    },
+    "downloadsText": "Ha habido {{welcome.downloads}} para este día."
+  }
+}

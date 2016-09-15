@@ -1,0 +1,60 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 13px;
+  line-height: 20px;
+  background-color: #eeeeee;
+  margin: 0;
+}
+
+a {
+  color: #00539e;
+}
+
+h3 {
+  color: #00539e;
+}
+
+@keyframes highlight {
+  50% {
+    background: rgba(18,153,246,0.2);
+  }
+  100% {
+    background: rgba(18,153,246,0);
+  }
+}
+
+.highlight {
+  animation-name: highlight;
+  animation-duration: 3s;
+  animation-delay: .5s;
+}
+
+/* PAGE NOT FOUND */
+.pagenotfound {
+  height: 200px;
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -40%;
+  text-align: center;
+}
+/* END OF PAGE NOT FOUND */
+
+.hidden {
+  display: none;
+}
+
+/* SECTION STYLING */
+.section-header {
+  height: 38px;
+  padding: 6px 24px 6px 14px;
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+}

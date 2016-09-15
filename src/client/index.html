@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React/Redux Starter</title>
+    <link rel="shortcut icon" href="js/favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+    <div id="ReactApp"></div>
+
+    <script>
+      var WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,500:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <script>
+      (function() {
+        var qs = document.location.search.toLowerCase();
+        var cb = document.createElement('script');
+        cb.src = qs.indexOf('debug_mode=true') > -1 ? '/js/debug/client_bundle.js' : '/js/client_bundle.js';
+        cb.type = 'text/javascript';
+        cb.async = 'true';
+        document.body.appendChild(cb);
+      })();
+    </script>
+  </body>
+</html>
