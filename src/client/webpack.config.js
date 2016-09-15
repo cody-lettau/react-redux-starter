@@ -61,13 +61,14 @@ module.exports = {
   name: 'factory-client',
   context: __dirname,
   resolve: {
+    root: path.resolve(__dirname, 'node_modules'),
     extensions: ['', '.js', '.jsx', '.css'],
   },
   entry: [
     // 'webpack-dev-server/src?http://localhost:8080',
     // 'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'index.js'),
-    // path.resolve(__dirname, "examples/example-react-01.js")
+    // path.resolve(__dirname, 'examples/example-react-01.js')
   ],
   output: {
     path: path.join(__dirname, '../../build/public/js/', process.env.NODE_ENV === 'production' ? '' : 'debug'),
@@ -84,8 +85,7 @@ module.exports = {
           __dirname,
         ],
         exclude: [
-          path.join(__dirname, 'node_modules'),
-          path.join(__dirname, 'client/examples'),
+          path.resolve(__dirname, 'node_modules'),
         ],
         // loader: "react-hot!babel?presets[]=es2015&presets[]=react",
         loader: 'babel?presets[]=es2015&presets[]=react',
@@ -115,7 +115,7 @@ module.exports = {
   plugins: getPlugins(),
 
   eslint: {
-    configFile: 'client/.eslintrc.js',
+    configFile: 'src/client/.eslintrc.js',
     // emitWarning results in any lint errors to only be reported as a warning,
     // which allows Webpack to generate the bundle. If it reports as an error,
     // then webpack does not generate the bundle.

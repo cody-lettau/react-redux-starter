@@ -28,6 +28,7 @@ module.exports = {
   name: 'factory-server',
   target: 'node',
   resolve: {
+    root: path.resolve(__dirname, 'node_modules'),
     extensions: ['', '.js'],
   },
   entry: [
@@ -35,7 +36,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, '../../build'),
-    filename: 'server_bundle.js',
+    filename: 'server.js',
     sourceMapFilename: '[file].map',
   },
   module: {
@@ -52,7 +53,7 @@ module.exports = {
   ],
 
   eslint: {
-    configFile: 'client/.eslintrc.js',
+    configFile: 'src/client/.eslintrc.js',
     // emitWarning results in any lint errors to only be reported as a warning,
     // which allows Webpack to generate the bundle. If it reports as an error,
     // then webpack does not generate the bundle.
